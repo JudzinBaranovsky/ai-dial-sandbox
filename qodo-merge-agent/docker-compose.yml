@@ -1,6 +1,9 @@
 services:
   qodo-pr-agent:
-    image: codiumai/pr-agent:0.30
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-dial-poc/qodo-merge-instrumented
     container_name: qodo-pr-agent
     command:
       - --pr_url
@@ -10,3 +13,5 @@ services:
       - ./secrets.env
       - ./basic-config.env
       - ./temp.env
+    volumes:
+      - ./tcpdump:/tmp

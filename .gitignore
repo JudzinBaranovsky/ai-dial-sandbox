@@ -1,3 +1,5 @@
 .idea
 /**/secrets.env
 /**/temp.env
+
+/qodo-merge-agent/tcpdump/
