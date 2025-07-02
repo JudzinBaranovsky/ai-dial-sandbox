@@ -1,0 +1,12 @@
+services:
+  qodo-pr-agent:
+    image: codiumai/pr-agent:0.30
+    container_name: qodo-pr-agent
+    command:
+      - --pr_url
+      - $GITHUB_PR_URL
+      - $PR_ACTION
+    env_file:
+      - ./secrets.env
+      - ./basic-config.env
+      - ./temp.env
