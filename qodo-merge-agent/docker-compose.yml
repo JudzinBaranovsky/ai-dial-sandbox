@@ -9,6 +9,7 @@ services:
       - --pr_url
       - $GITHUB_PR_URL
       - $PR_ACTION
+      - "${ASK_PROMPT}"
     env_file:
       - ./secrets.env
       - ./basic-config.env

@@ -3,3 +3,5 @@
 /**/temp.env
 
 /qodo-merge-agent/tcpdump/
+
+*.pcap
